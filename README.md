@@ -43,12 +43,26 @@ Lo que aprendí:
 
 ### Screenshot
 ![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img1.png)
+
 ![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img2.png)
+
 ![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img3.png)
+
 ![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img4.png)
+
 ![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img5.png)
+
 ![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img6.png)
+
 ![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img7.png)
+
 ![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img8.png)
+
+![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img9.png)
+
+![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img10.png)
+
+![](https://github.com/EmmanuelLopez1/rock-paper-scissors-spock/blob/master/finalScreenshots/img11.png)
+
 
 
