@@ -157,15 +157,11 @@ export const game = class Game {
                     funciones.removeTextNodes(this.player.childNodes)
                     funciones.removeTextNodes(this.bot.childNodes)
                     const botMove = this.botSelectCard()
+                    funciones.changeSrc(this.playerImg, `./images/icon-${name}.svg`)
+                    funciones.changeSrc(this.botImg, `./images/icon-${botMove}.svg`)
 
                     this.player.firstChild.setAttribute('class', `button ${name}`)
                     this.bot.firstChild.setAttribute('class', `button ${botMove}`)
-
-                    console.log(this.player.firstChild.classList);
-                    console.log(this.bot.firstChild.classList);
-                    
-                    funciones.changeSrc(this.playerImg, `./images/icon-${name}.svg`)
-                    funciones.changeSrc(this.botImg, `./images/icon-${botMove}.svg`)
 
                     this.animacion(this.player.firstChild, 100)
                     this.animacion(this.bot.firstChild, 2000)

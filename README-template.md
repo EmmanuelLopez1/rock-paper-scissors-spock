@@ -1,5 +1,4 @@
-## Welcome to this project.
-Based on the well-known rock-paper-scissors game.
+## Welcome to this project based on the well-known rock-paper-scissors game.
 As the first project in my personal portfolio, I wanted to start with something simple but showing the basic technologies of a FrontEnd project.
 Using the basic technologies of any web project, HTML5, CSS3 AND JAVASCRIPT and the SASS preprocessor.
 
