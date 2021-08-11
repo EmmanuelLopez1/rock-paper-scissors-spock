@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  font-size: 16px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: linear-gradient(to bottom, #1f3756, #141539);
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+.alingV {
+  display: flex;
+  align-items: center;
+}
+
+.text, .contenedor .game .final__result {
+  color: white;
+  text-align: center;
+}
+
+.title, .contenedor .game .btn, .contenedor .game-mode__title, .contenedor .content-rules__title {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+.contenedor {
+  width: 100%;
+}
+.contenedor .animation {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  transition: all 3s;
+}
+
+.contenedor {
+  height: 100%;
+  display: flex;
+}
+.contenedor .content-rules {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  display: none;
+}
+.contenedor .content-rules__title {
+  height: 10%;
+  color: #3b4363;
+  font-size: 2rem;
+}
+.contenedor .content-rules__icon {
+  font-size: 2rem;
+  margin-top: 50px;
+  color: #3b4363;
+}
+.contenedor .content-rules__icon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+  transition: all 0.5s;
+}
+.contenedor .game-mode {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 19.4375em;
+  margin: auto;
+}
+.contenedor .game-mode__title {
+  font-size: 3.5em;
+  text-align: center;
+}
+.contenedor .game-mode .button, .contenedor .game-mode .button__bg, .contenedor .game-mode .button__bg-transparent {
+  margin: auto;
+}
+.contenedor .game {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 19.4375em;
+  margin: 0px auto;
+  display: none;
+}
+.contenedor .game .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 12px 12px 23px;
+}
+.contenedor .game .header__title {
+  width: 83px;
+  font-size: 1.3125em;
+  font-weight: 600;
+  line-height: 1rem;
+  color: white;
+}
+.contenedor .game .header-score {
+  width: 5em;
+  height: 4.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+}
+.contenedor .game .header-score__title {
+  text-align: center;
+  font-size: 0.625em;
+  color: #2a46c0;
+  letter-spacing: 1.5625px;
+  font-weight: 600;
+}
+.contenedor .game .header-score__number {
+  text-align: center;
+  font-size: 2.5em;
+  color: #3b4363;
+  font-weight: 700;
+}
+.contenedor .game .main {
+  margin-top: 6.5625em;
+}
+.contenedor .game .main .normal-mode {
+  background: url("../images/bg-triangle.svg");
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 13px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: none;
+}
+.contenedor .game .main .normal-mode .rock {
+  margin: auto;
+  margin-top: 15px;
+}
+.contenedor .game .main .bonus-mode {
+  font-size: 13px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "scissors scissors" "spock paper" "lizard rock";
+  grid-row-gap: 20px;
+  justify-content: space-around;
+  justify-items: center;
+  display: none;
+}
+.contenedor .game .main .match {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  display: none;
+}
+.contenedor .game .main .match__pick {
+  display: flex;
+  flex-direction: column;
+}
+.contenedor .game .main .match__text {
+  color: white;
+  font-size: 0.9375rem;
+  letter-spacing: 1.8px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 17px;
+  text-transform: uppercase;
+}
+.contenedor .game .main .match .button, .contenedor .game .main .match .button__bg, .contenedor .game .main .match .button__bg-transparent {
+  margin: auto;
+}
+.contenedor .game .final {
+  margin-top: 35px;
+  display: none;
+}
+.contenedor .game .final__result {
+  font-size: 3.5em;
+}
+.contenedor .game .final .play-again {
+  padding: 0.937rem 3.875em;
+  display: block;
+  margin: 16px auto 0px;
+  font-size: 1rem;
+  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  border-radius: 8px;
+  color: #3b4363;
+  border: none;
+  outline: none;
+}
+.contenedor .game .btn {
+  font-size: 16px;
+  margin: auto;
+  display: block;
+  width: 8em;
+  background-color: transparent;
+  padding: 0.6875em 2.25em;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-top: 52px;
+}
+.contenedor .game .btn:hover {
+  cursor: pointer;
+}
+
+.button, .button__bg, .button__bg-transparent {
+  width: 8.125em;
+  height: 8.3125em;
+  padding: 0.9375em;
+  border-radius: 100%;
+}
+.button__bg, .button__bg-transparent {
+  background-color: white;
+  padding: 0px;
+}
+.button__bg-transparent {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.0966455) 0%, rgba(255, 255, 255, 0.0001) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button__img {
+  width: 3em;
+  height: 3.5em;
+}
+
+.button:hover, .button__bg:hover, .button__bg-transparent:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.paper {
+  background: linear-gradient(to bottom, #4865f4, #5671f5);
+  grid-area: paper;
+  justify-self: end;
+}
+
+.scissors {
+  background: linear-gradient(to bottom, #eb9f0e, #ffac13);
+  grid-area: scissors;
+}
+
+.rock {
+  background: linear-gradient(to bottom, #dc2e4e, #dd405d);
+  grid-area: rock;
+}
+
+.lizard {
+  grid-area: lizard;
+  background: linear-gradient(to bottom, #834fe3, #8c5de5);
+}
+
+.spock {
+  background: linear-gradient(to bottom, #1fd2ff, #00ccff);
+  grid-area: spock;
+  justify-self: start;
+}
+
+/*# sourceMappingURL=index.css.map */

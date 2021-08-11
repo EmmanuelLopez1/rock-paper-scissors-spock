@@ -1,0 +1,304 @@
+//FONT
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+$font: "Barlow Semi Condensed", sans-serif;
+$font-semi-bold: 600;
+$font-bold: 700;
+
+//PRIMARY
+$PaperGradient: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+$ScissorsGradient: #eb9f0e, #ffac13;
+$RockGradient: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
+$LizardGradient: hsl(261, 73%, 60%), hsl(261, 72%, 63%);
+$SpockGradient: rgb(31, 210, 255), rgb(0, 204, 255);
+$Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+//NEAUTRAL
+$DarkText: hsl(229, 25%, 31%);
+$ScoreText: hsl(229, 64%, 46%);
+$HeaderOutline: hsl(217, 16%, 45%);
+
+//BACKGROUND
+$RadialGradient: hsl(214, 47%, 23%), hsl(237, 49%, 15%);
+
+//ESTILOS GENERALES
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  font-size: 16px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: linear-gradient(to bottom, $RadialGradient);
+  background-repeat: no-repeat;
+}
+
+a {
+  text-decoration: none;
+}
+
+//CLASES REUSABLES
+.alingV {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  color: white;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+//PANTALLA ELECCION DEL MODO DE JUEGO
+.contenedor {
+  width: 100%;
+  .animation {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: all 3s;
+  }
+}
+
+//PANTALLA DE INICIO DEL JUEGO
+.contenedor {
+  height: 100%;
+  display: flex;
+  .content-rules {
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: none;
+    &__title {
+      height:10%;
+      @extend .title;
+      color: $DarkText;
+
+      font-size: 2rem;
+    }
+    &__icon{
+     font-size: 2rem;
+     margin-top:50px;
+     color: $DarkText;
+    }
+  }
+  .content-rules__icon:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition:all .5s;
+  }
+  .game-mode {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 19.4375em;
+    margin: auto;
+    &__title {
+      @extend .title;
+      font-size: 3.5em;
+      text-align: center;
+    }
+    .button {
+      margin: auto;
+    }
+  }
+  .game {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 19.4375em;
+    margin: 0px auto;
+    display: none;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 12px 12px 23px;
+      &__title {
+        width: 83px;
+        font-size: 1.3125em;
+        font-weight: $font-semi-bold;
+        line-height: 1rem;
+        color: white;
+      }
+      &-score {
+        width: 5em;
+        height: 4.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        border-radius: 8px;
+        &__title {
+          text-align: center;
+          font-size: 0.625em;
+          color: $ScoreText;
+          letter-spacing: 1.5625px;
+          font-weight: $font-semi-bold;
+        }
+        &__number {
+          text-align: center;
+          font-size: 2.5em;
+          color: $DarkText;
+          font-weight: $font-bold;
+        }
+      }
+    }
+    .main {
+      margin-top: 6.5625em;
+
+      .normal-mode {
+        background: url("../images/bg-triangle.svg");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-size: 13px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        display: none;
+        .rock {
+          margin: auto;
+          margin-top: 15px;
+        }
+      }
+      .bonus-mode {
+        font-size: 13px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+          "scissors scissors"
+          "spock paper"
+          "lizard rock";
+        grid-row-gap: 20px;
+        justify-content: space-around;
+        justify-items: center;
+        display: none;
+      }
+      .match {
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        display:none;
+        &__pick {
+          display: flex;
+          flex-direction: column;
+        }
+        &__text {
+          color: white;
+          font-size: 0.9375rem;
+          letter-spacing: 1.8px;
+          font-weight: $font-bold;
+          text-align: center;
+          margin-top: 17px;
+          text-transform: uppercase;
+        }
+        .button {
+          margin: auto;
+        }
+      }
+    }
+    .final {
+      margin-top: 35px;
+      display:none;
+      &__result {
+        @extend .text;
+        font-size: 3.5em;
+      }
+      .play-again {
+        padding: 0.937rem 3.875em;
+        display: block;
+        margin: 16px auto 0px;
+        font-size: 1rem;
+        font-weight: $font-bold;
+        font-weight: $font-semi-bold;
+        letter-spacing: 2.5px;
+        border-radius: 8px;
+        color: $DarkText;
+        border: none;
+        outline: none;
+      }
+    }
+    .btn {
+      @extend .title;
+      font-size: 16px;
+      margin: auto;
+      display: block;
+      width: 8em;
+      background-color: transparent;
+      padding: 0.6875em 2.25em;
+      border: 1px solid white;
+      border-radius: 8px;
+      margin-top: 52px;
+    }
+    .btn:hover{
+      cursor: pointer;
+    }
+  }
+}
+
+.button {
+  width: 8.125em;
+  height: 8.3125em;
+  padding: 0.9375em;
+  border-radius: 100%;
+  &__bg {
+    @extend .button;
+    background-color: white;
+    padding: 0px;
+    &-transparent {
+      @extend .button__bg;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.0966455) 0%,
+        rgba(255, 255, 255, 0.0001) 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__img {
+    width: 3em;
+    height: 3.5em;
+  }
+}
+
+.button:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.paper {
+  background: linear-gradient(to bottom, $PaperGradient);
+  grid-area: paper;
+  justify-self: end;
+}
+.scissors {
+  background: linear-gradient(to bottom, $ScissorsGradient);
+  grid-area: scissors;
+}
+.rock {
+  background: linear-gradient(to bottom, $RockGradient);
+  grid-area: rock;
+}
+.lizard {
+  grid-area: lizard;
+  background: linear-gradient(to bottom, $LizardGradient);
+}
+.spock {
+  background: linear-gradient(to bottom, $SpockGradient);
+  grid-area: spock;
+  justify-self: start;
+}

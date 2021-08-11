@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+</head>
+
+<body>
+
+  <div class="contenedor">
+    <div class="content-rules">
+      <h2 class="content-rules__title">
+        Rules
+      </h2>
+      <img class="content-rules__img" src="./images/image-rules.svg" alt="">
+      <i class="fas fa-times content-rules__icon"></i>
+    </div>  
+
+    <div class="game-mode">
+      <h2 class="game-mode__title">
+        Select game mode
+      </h2>
+
+      <div class="button paper normalMode">
+        <div class="button__bg">
+          <div class="button__bg-transparent">
+            <img src="./images/icon-paper.svg" alt="" class="button__img">
+          </div>
+        </div>
+      </div>
+
+      <div class="button lizard spockMode">
+        <div class="button__bg">
+          <div class="button__bg-transparent">
+            <img src="./images/icon-lizard.svg" alt="" class="button__img">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="game">
+      <div class="header white-box alingV">
+        <h2 class="header__title">
+          ROCK PAPER SCISSORS
+        </h2>
+        <div class="header-score">
+          <h5 class="header-score__title">
+            SCORE
+          </h5>
+          <h2 class="header-score__number">
+            12
+          </h2>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="normal-mode">
+          <div class="button paper select-paper">
+            <div class="button__bg">
+              <div class="button__bg-transparent">
+                <img src="./images/icon-paper.svg" alt="" class="button__img">
+              </div>
+            </div>
+          </div>
+          <div class="button scissors select-scissors">
+            <div class="button__bg">
+              <div class="button__bg-transparent">
+                <img src="./images/icon-scissors.svg" alt="" class="button__img">
+              </div>
+            </div>
+          </div>
+          <div class="button rock select-rock">
+            <div class="button__bg">
+              <div class="button__bg-transparent">
+                <img src="./images/icon-rock.svg" alt="" class="button__img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bonus-mode">
+          <div class="button paper select-paper">
+            <div class="button__bg">
+              <div class="button__bg-transparent">
+                <img src="./images/icon-paper.svg" alt="" class="button__img">
+              </div>
+            </div>
+          </div>
+
+          <div class="button scissors select-scissors">
+            <div class="button__bg">
+              <div class="button__bg-transparent">
+                <img src="./images/icon-scissors.svg" alt="" class="button__img">
+              </div>
+            </div>
+          </div>
+
+          <div class="button rock select-rock">
+            <div class="button__bg">
+              <div class="button__bg-transparent">
+                <img src="./images/icon-rock.svg" alt="" class="button__img">
+              </div>
+            </div>
+          </div>
+
+          <div class="button lizard select-lizard">
+            <div class="button__bg">
+              <div class="button__bg-transparent">
+                <img src="./images/icon-lizard.svg" alt="" class="button__img">
+              </div>
+            </div>
+          </div>
+
+          <div class="button spock select-spock">
+            <div class="button__bg">
+              <div class="button__bg-transparent">
+                <img src="./images/icon-spock.svg" alt="" class="button__img">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="match">
+          <div class="match__pick player">
+            <div class="button">
+              <div class="button__bg">
+                <div class="button__bg-transparent">
+                  <img src="./images/icon-paper.svg" alt="" class="button__img player__img">
+                </div>
+              </div>
+            </div>
+            <p class="match__text">
+              YOU PICKED
+            </p>
+          </div>
+
+          <div class="match__pick bot">
+            <div class="button">
+              <div class="button__bg">
+                <div class="button__bg-transparent">
+                  <img src="./images/icon-paper.svg" alt="" class="button__img bot__img">
+                </div>
+              </div>
+            </div>
+            <p class="match__text">
+              THE HOUSE picked
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="final">
+        <h2 class="final__result">
+          default text
+        </h2>
+        <button class="play-again">
+          PLAY AGAIN
+        </button>
+      </div>
+
+      <button class="rules white-box btn">
+        rules
+      </button>
+
+      <button class="home white-box btn">
+        home
+      </button>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a0f72ea1e7.js" crossorigin="anonymous"></script>
+  <script src='./js/index.js' type="module"></script>
+</body>
+
+</html>
